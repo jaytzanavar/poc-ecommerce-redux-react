@@ -1,11 +1,12 @@
 import Card from "../UI/Card";
 import classes from "./ProductItem.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
 const ProductItem = (props) => {
   const { title, price, description, id } = props;
   const dispatch = useDispatch();
+  // const cart = useSelector((state) => state.cart);
 
   const addToCartHandler = () => {
     dispatch(
